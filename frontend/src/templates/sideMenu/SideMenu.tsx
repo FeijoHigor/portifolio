@@ -1,6 +1,8 @@
 import { useState } from "react"
 import styled from "styled-components"
 
+import { Link, useLocation } from "react-router-dom"
+
 
 const OptionsCont = styled.div`
     position: absolute;
@@ -86,9 +88,11 @@ const MenuCont = styled.div`
     }
 `
 
-function SideMenu() {
+function SideMenu(props: any) {
 
     const [isOpen, setIsOpen] = useState(false)
+
+    console.log(useLocation())
 
     return (
         <OptionsCont>
@@ -100,19 +104,19 @@ function SideMenu() {
             <MenuCont open={isOpen}>
                 <ul>
                     <li>
-                        <a className="selectedPage" href="">
-                            Home
-                        </a>
+                        <Link to={'/'} className={useLocation().pathname == '/' ? "selectedPage": ''}>
+                            Home    
+                        </Link>
                     </li>
                     <li>
-                        <a href="">
-                            Experiencia
-                        </a>
+                        <Link to={'/experiencia'} className={useLocation().pathname == '/experiencia' ? "selectedPage": ''}>
+                            Experiência
+                        </Link>
                     </li>
                     <li>
-                        <a href="">
+                        <Link to={'/contato'} className={useLocation().pathname == '/contato' ? "selectedPage": ''}>
                             Contato
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </MenuCont>

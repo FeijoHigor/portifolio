@@ -1,7 +1,6 @@
-import { useState } from "react"
 import styled from "styled-components"
 
-import BallsList from "../templates/BallsList/BallsList"
+import BallsList from "../../templates/BallsList/BallsList"
 
 const Container = styled.div`
   width: 100%;
