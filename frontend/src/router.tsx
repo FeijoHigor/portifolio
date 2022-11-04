@@ -14,7 +14,7 @@ export const Router = () => {
             <BrowserRouter>
             <SideMenu />
             <Routes>
-                <Route path="/" exact element={<Home />} />
+                <Route path="/" exact={true} element={<Home />} />
                 <Route path="/experiencia" element={<Experience />} />
                 <Route path="/contato" element={<Contact />} />
             </Routes>

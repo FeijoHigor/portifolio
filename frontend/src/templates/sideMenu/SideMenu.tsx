@@ -92,8 +92,6 @@ function SideMenu(props: any) {
 
     const [isOpen, setIsOpen] = useState(false)
 
-    console.log(useLocation())
-
     return (
         <OptionsCont>
             <Hamburger open={isOpen} onClick={() => setIsOpen(!isOpen)}>

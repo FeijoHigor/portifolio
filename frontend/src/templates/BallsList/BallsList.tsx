@@ -10,12 +10,23 @@ const BallsCont = styled.ul`
     right: 1rem;
     transition: 0.2s;
 
-    @media(min-width: 600px) {
-        bottom: 50%;
-        right: 5%;
-        transform: translate(0, 50%);
-        transition: 0.2s;
-    }
+    ${(props: any) => props.page == 'experience' ? `
+        flex-direction: row;
+        right: 50%;
+        transform: translate(50%, 0)
+    ` : props.page == 'contact' ? `
+        @media(min-width: 600px) {
+            opacity: 0;
+        }
+    ` : `
+        @media(min-width: 600px) {
+            bottom: 50%;
+            right: 5%;
+            transform: translate(0, 50%);
+            transition: 0.2s;
+        }
+    `}
+
 `
 
 const Ball = styled.li`
@@ -33,6 +44,10 @@ const Ball = styled.li`
         @media(min-width: 600px) {
             display: none;
         }
+    ` : ``)}
+
+    ${(props: any) => (props.twoBall ? `
+        display: none;
     ` : ``)}
 
     ${(props: any) => (
@@ -58,10 +73,10 @@ function BallsList(props: any) {
     }
 
     return (
-        <BallsCont>
+        <BallsCont page={props.page}>
             <Ball onClick={() => clickHandle(1)} />
             <Ball onClick={() => clickHandle(2)} />
-            <Ball onClick={() => clickHandle(3)} cellphone />
+            <Ball onClick={() => clickHandle(3)} twoBall={props.page == 'contact' ? true : false} cellphone={props.page == 'experience' ? false : true} />
         </BallsCont>
     )
 }
