@@ -8,6 +8,13 @@ const OptionsCont = styled.div`
     position: absolute;
     top: 3%;
     left: 4%;
+
+    @media(min-width: 600px) {
+        top: 50%;
+        right: 5%;
+        transform: translate(0, -170%);
+        left: -23rem;
+    }
 `
 
 const Hamburger = styled.button`
@@ -50,18 +57,18 @@ const Hamburger = styled.button`
             transform: ${(props: any) => props.open ? 'rotate(-45deg)' : 'rotate(0)'};
         }
     }
+
+    @media(min-width: 600px) {
+        transition: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+    }
 `
 
 const MenuCont = styled.div`
-
-    opacity: ${(props: any) => props.open ? '1' : '0'};
-    pointer-events: ${(props: any) => props.open ? 'inherit' : 'none'};
-
     transition: 0.3s;
 
     position: absolute;
-    top: 18rem;
-    left: -14.8rem;
     transform: rotate(-90deg);
 
     ul {
@@ -71,11 +78,11 @@ const MenuCont = styled.div`
     }
 
     a {
-        margin: 0 10px 0 10px;
-        color: #fff;
+        margin: 0 40px 0 40px;
+        color: #ffffffd7;
         text-decoration: none;
-        font-size: 2.2rem;
         font-weight: 300;
+        font-size: 3.2rem;
 
         &:hover {
             color: #ffffffa5;
@@ -85,6 +92,18 @@ const MenuCont = styled.div`
 
     a.selectedPage {
         font-weight: 500;
+    }
+
+    @media(max-width: 600px) {
+        opacity: ${(props: any) => props.open ? '1' : '0'};
+        top: 18rem;
+        pointer-events: ${(props: any) => props.open ? 'inherit' : 'none'};
+        left: -14.8rem;
+
+        a {
+            margin: 0 10px 0 10px;
+            font-size: 2.2rem;
+        }
     }
 `
 
