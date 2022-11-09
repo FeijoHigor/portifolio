@@ -106,6 +106,27 @@ const StyledContainer = styled.div`
         }
     }
 
+    @media(min-width: 1350px) {
+        padding-left: 18rem;
+        h2 {
+            font-size: 4.5rem;
+        }
+
+        h1 {
+            font-size: 12rem;
+        }
+    }
+
+    @media(min-width: 1750px) {
+        h1 {
+            font-size: 16rem;
+        }
+
+        h2 {
+            font-size: 6rem;
+        }
+    }
+
 `
 
 function FirstPage(props: any) {
