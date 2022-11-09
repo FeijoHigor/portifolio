@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom"
 
 
 const OptionsCont = styled.div`
+    z-index: 1;
     position: absolute;
     top: 3%;
     left: 4%;

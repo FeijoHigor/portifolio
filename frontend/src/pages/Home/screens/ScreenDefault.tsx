@@ -9,10 +9,10 @@ function ScreenDefault(props: any) {
             <ScreenPart pageColor={'linear-gradient(165.58deg, #C22B2B 15.63%, #290000 100%);'} className="page 1">
                 <FirstPage />
             </ScreenPart>
-            <ScreenPart pageColor={'linear-gradient(180deg, #C12A2A 0%, #971F1F 51.04%, #C12A2A 100%);'} className="page 2">
+            <ScreenPart pageColor={'linear-gradient(15.12deg, #C22B2B 10.63%, #290000 100.95%);'} className="page 2">
                 2
             </ScreenPart>
-            <ScreenPart cellphone pageColor={'linear-gradient(180deg, #C12A2A 16.15%, #280000 100%);'} className="page 3">
+            <ScreenPart cellphone pageColor={'linear-gradient(179.91deg, #C22B2B 10.19%, #290000 99.84%);'} className="page 3">
                 3
             </ScreenPart>
         </>

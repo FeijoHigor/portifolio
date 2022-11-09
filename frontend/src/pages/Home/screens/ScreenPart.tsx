@@ -10,7 +10,7 @@ const ScreenPart = styled.div`
   justify-content: center;
 
   ${(props: any) => (props.cellphone ? `
-        @media(min-width: 600px) {
+        @media(min-width: 900px) {
             display: none;
         }
     ` : ``)}

@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
     h2 {
         font-weight: 300;
         font-size: 3rem;
-        width: 100%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -43,7 +43,7 @@ const StyledContainer = styled.div`
         }
         h2.red-word {
             text-shadow: 0px 1px 10px rgba(232, 16, 16, 0.36);
-            color: #A10000;
+            color: #d20c0c;
             display: inline;
         }
     }
@@ -137,7 +137,7 @@ function FirstPage(props: any) {
                 <h2>Olá, eu sou o <div className="red-line"></div></h2>
                 <h1>Higor Feijó</h1>
                 <div className="slogan">
-                    <h2 className="slogan">Pensar, projetar, desenvolver e</h2><h2 className="red-word"> fazer dar certo.</h2> 
+                    <h2 className="slogan">Pensar, projetar, desenvolver e </h2><h2 className="red-word"> fazer dar certo!</h2> 
                 </div>
             </div>
         </StyledContainer>
