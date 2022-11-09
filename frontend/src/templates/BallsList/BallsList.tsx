@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const BallsCont = styled.ul`
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

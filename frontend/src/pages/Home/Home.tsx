@@ -10,6 +10,10 @@ const Container = styled.div`
   overflow-x: hidden;
   overflow: auto;
   scroll-snap-type: y mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 function Main() {

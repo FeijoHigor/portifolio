@@ -11,7 +11,10 @@ const StyledContainer = styled.div`
     overflow: auto;
     scroll-snap-type: x mandatory;  
     display: flex;
-
+    
+    &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 const StyledTest = styled.div`
